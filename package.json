@@ -1,18 +1,28 @@
 {
   "name": "react_app",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "private": true,
-  "dependencies": {
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4"
-  },
-  "devDependencies": {
-    "react-scripts": "0.9.5"
-  },
+  "description": "a app based on react",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "keywords": [
+    "react",
+    "es6",
+    "wepback"
+  ],
+  "author": "mosaic101",
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-plugin-react": "^6.10.3",
+    "nodemon": "^1.11.0",
+    "react-scripts": "0.9.5"
   }
 }
