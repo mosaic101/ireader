@@ -20,8 +20,12 @@
     "wepback"
   ],
   "proxy": "http://localhost:4000",
+  "theme": {
+    "primary-color": "#1DA57A"
+  },
   "dependencies": {
     "antd": "^2.9.3",
+    "antd-mobile": "^1.1.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },
