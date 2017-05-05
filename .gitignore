@@ -2,7 +2,13 @@
 # Ignore css 
 /src/**/*.css
 
+# Dependencies
 /node_modules
+
+# Production
 /build
-/public
+
+# example
 /example
+
+npm-debug.log
