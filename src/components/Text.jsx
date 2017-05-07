@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import { DatePicker, message, Button } from 'antd-mobile'
+import { DatePicker, message, Button } from 'antd'
 
 class Text extends Component {
   constructor(props) {
