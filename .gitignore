@@ -11,4 +11,7 @@
 # example
 /example
 
-npm-debug.log
+*.log
+
+# eslintrc.json
+.eslintrc.json

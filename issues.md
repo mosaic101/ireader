@@ -42,3 +42,6 @@ module.exports = {
   }
 };
 ```
+
+### 3.antd-mobile Icon个人svg配置
+目测是eslintrc.json

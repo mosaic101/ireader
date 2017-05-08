@@ -16,7 +16,6 @@
     "wepback"
   ],
   "dependencies": {
-    "antd": "^2.10.0",
     "antd-mobile": "^1.1.2",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
