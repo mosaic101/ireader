@@ -12,7 +12,7 @@ class Nav extends Component {
             <Icon key="1" type="ellipsis" />
           ]}
         >看书神器</NavBar>
-        <Icon type={require('./loading.svg')} size="md"/>
+        <Icon type={require('../icons/loading.svg')} size="md"/>
         
       </div>
     )
