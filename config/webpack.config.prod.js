@@ -8,7 +8,12 @@ var ManifestPlugin = require('webpack-manifest-plugin');
 var InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
 var paths = require('./paths');
 var getClientEnvironment = require('./env');
+var path = require('path');
 
+const svgDirs = [
+  require.resolve('antd-mobile').replace(/warn\.js$/, ''),  // 1. 属于 antd-mobile 内置 svg 文件
+  path.resolve(__dirname, 'src/icons/'),  // 2. 自己私人的 svg 存放目录
+];
 
 
 // Webpack uses `publicPath` to determine where the app is being served from.
@@ -78,7 +83,7 @@ module.exports = {
     // We also include JSX as a common component filename extension to support
     // some tools, although we do not recommend using it, see:
     // https://github.com/facebookincubator/create-react-app/issues/290
-    extensions: ['.js', '.json', '.jsx', ''],
+    extensions: ['', '.web.tsx', '.web.ts', '.web.jsx', '.web.js', '.ts', '.tsx', '.js', '.jsx', '.json'],
     alias: {
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
@@ -126,7 +131,7 @@ module.exports = {
         loader: 'babel',
         query: {
           plugins: [
-            ['import', [{ libraryName: "antd", style: 'css' }]],
+            ['import', [{ libraryName: "antd-mobile", style: 'css' }]],
           ],
           // This is a feature of `babel-loader` for webpack (not Babel itself).
           // It enables caching results in ./node_modules/.cache/babel-loader/
@@ -163,11 +168,9 @@ module.exports = {
       },
       // "file" loader for svg
       {
-        test: /\.svg$/,
-        loader: 'file',
-        query: {
-          name: 'static/media/[name].[hash:8].[ext]'
-        }
+        test: /\.(svg)$/i,
+        loader: 'svg-sprite',
+        include: svgDirs,  // 把 svgDirs 路径下的所有 svg 文件交给 svg-sprite-loader 插件处理
       }
       // ** STOP ** Are you adding a new loader?
       // Remember to add the new extension(s) to the "url" loader exclusion list.

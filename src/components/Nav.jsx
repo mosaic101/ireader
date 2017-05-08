@@ -6,16 +6,17 @@ class Nav extends Component {
   render() {
     return (
       <div>
-        <NavBar leftContent="back" mode="light" onLeftClick={() => console.log('onLeftClick')}
+        <NavBar leftContent="后退" mode="light" onLeftClick={() => console.log('onLeftClick')}
           rightContent={[
             <Icon key="0" type="search" style={{ marginRight: '0.32rem' }} />,
             <Icon key="1" type="ellipsis" />,
+            <Icon type="like" />
           ]}
-        >zzzzz</NavBar>
+        >看书神器</NavBar>
+        222
       </div>
     )
   }
 }
-
 
 export default Nav
