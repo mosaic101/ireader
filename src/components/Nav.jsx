@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react'
 import { NavBar, Icon } from 'antd-mobile'
 
@@ -10,10 +11,11 @@ class Nav extends Component {
             <Icon key="0" type="search" style={{ marginRight: '0.32rem' }} />,
             <Icon key="1" type="ellipsis" />,
           ]}
-        >NavBar</NavBar>
+        >zzzzz</NavBar>
       </div>
     )
   }
 }
+
 
 export default Nav

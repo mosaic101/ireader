@@ -5,12 +5,8 @@
   "author": "mosaic101",
   "description": "a app based on react",
   "scripts": {
-    "build-css": "node-sass-chokidar src/ -o src/",
-    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
-    "start-js": "react-scripts start",
-    "start": "npm-run-all -p watch-css start-js",
-    "now-start": "serve -s build/",
-    "build": "npm run build-css && react-scripts build",
+    "start": "node scripts/start.js",
+    "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom"
   },
   "keywords": [
@@ -19,13 +15,9 @@
     "eslint",
     "wepback"
   ],
-  "proxy": "http://localhost:4000",
-  "theme": {
-    "primary-color": "#1DA57A"
-  },
   "dependencies": {
-    "antd": "^2.9.3",
-    "antd-mobile": "^1.1.1",
+    "antd": "^2.10.0",
+    "antd-mobile": "^1.1.2",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },
@@ -59,14 +51,13 @@
     "http-proxy-middleware": "0.17.3",
     "jest": "18.1.0",
     "json-loader": "0.5.4",
-    "node-sass-chokidar": "^0.0.1",
-    "npm-run-all": "^4.0.2",
     "object-assign": "4.1.1",
     "postcss-loader": "1.2.2",
     "promise": "7.1.1",
     "react-dev-utils": "^0.5.2",
     "react-scripts": "^0.9.5",
     "style-loader": "0.13.1",
+    "svg-sprite-loader": "^2.0.5",
     "url-loader": "0.5.7",
     "webpack": "1.14.0",
     "webpack-dev-server": "1.16.2",
