@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import { Grid, WhiteSpace, WingBlank } from 'antd-mobile'
 import test from '../../test.png'
+import './Body.css'
 
 const data = Array.from(new Array(9)).map((_val, i) => ({
   icon: test,
@@ -23,15 +24,10 @@ class Body extends Component {
     return (
       <div>
         <WhiteSpace size="lg" />
-        <WingBlank size="lg">
-          <Grid data={data} columnNum={3} hasLine={false}
-            renderItem={renderItem}
-            style={{ background: '#f5f5f9' }}
-            onClick={() => console.log('grid')}
-          />
-        </WingBlank>
-
-
+        <Grid data={data} columnNum={3} hasLine={false}
+          renderItem={renderItem}
+          onClick={() => console.log('grid')}
+        />
       </div>
     )
   }
