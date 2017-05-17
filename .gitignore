@@ -1,6 +1,6 @@
 
 # Ignore css 
-/src/**/*.css
+# /src/**/*.css
 
 # Dependencies
 /node_modules
