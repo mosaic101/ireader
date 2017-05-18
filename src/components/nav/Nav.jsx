@@ -6,7 +6,7 @@
 /*   By: jianjin.wu <mosaic101@foxmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/18 14:34:43 by jianjin.wu        #+#    #+#             */
-/*   Updated: 2017/05/18 17:57:43 by jianjin.wu       ###   ########.fr       */
+/*   Updated: 2017/05/18 18:09:13 by jianjin.wu       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,13 @@ import search from '../../assets/icons/search.svg'
 import ellipsis from '../../assets/icons/ellipsis.svg'
 
 class Nav extends React.Component {
-
+  constructor(props) {
+    super(props)
+    this.state = {
+      open: false
+    }
+  }
+  
   showList() {
     this.setState({ open: !this.state.open })
   }
@@ -40,7 +46,7 @@ class Nav extends React.Component {
             <Icon key="1" type={ellipsis} />
           ]}
         >react</NavBar>
-        <NavDrawer data={onDock} />
+        <NavDrawer docked={this.state.open} />
       </div>
     )
   }
