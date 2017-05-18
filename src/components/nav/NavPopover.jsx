@@ -1,5 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   NavPopover.jsx                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jianjin.wu <mosaic101@foxmail.com>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/05/18 15:46:27 by jianjin.wu        #+#    #+#             */
+/*   Updated: 2017/05/18 17:53:34 by jianjin.wu       ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-import React, { Component } from 'react'
+
+import React from 'react'
 import { Popover, NavBar, Icon } from 'antd-mobile'
 
 import scan from '../icons/scan.svg'
@@ -7,7 +19,7 @@ import qrcode from '../icons/qrcode.svg'
 import help from '../icons/help.svg'
 const Item = Popover.Item;
 
-class HKPopover extends Component {
+class HKPopover extends React.Component {
   state = {
     visible: true,
     selected: '',

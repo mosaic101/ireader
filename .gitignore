@@ -13,4 +13,4 @@
 
 *.log
 
-/.eslintrc.json
+# /.eslintrc.json

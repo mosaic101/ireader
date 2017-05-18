@@ -22,7 +22,7 @@ resolve: {
 npm install svg-sprite-loader@0.3.1 -D //antd-mobile暂时没有升级该模块，须指定版本
 ```
 
-- 二. webpack配置
+- 二. 本地icon库引入 webpack配置 
 ```JavaScript
 const path = require('path');
 
@@ -43,4 +43,3 @@ module.exports = {
   }
 };
 ```
-

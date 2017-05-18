@@ -1,5 +1,5 @@
 
-import React, { Component } from 'react'
+import React from 'react'
 import { Flex, WhiteSpace, WingBlank } from 'antd-mobile'
 
 const PlaceHolder = (props) => (
@@ -16,7 +16,7 @@ const PlaceHolder = (props) => (
   </div>
 )
 
-class FlexTest extends Component {
+class FlexTest extends React.Component {
   render() {
     return (
       <div>
