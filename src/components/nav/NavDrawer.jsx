@@ -28,22 +28,24 @@ class NavDrawer extends React.Component {
     this.setState({ open: !this.state.open })
   }
   render() {
-    const sidebar = (<List>
-      {[...Array(6).keys()].map((i, index) => {
-        if (index === 0) {
+    const sidebar = (
+      <List>
+        {[...Array(6).keys()].map((i, index) => {
+          if (index === 0) {
+            return (<List.Item key={index}
+              thumb="https://zos.alipayobjects.com/rmsportal/eOZidTabPoEbPeU.png"
+              multipleLine
+            >Category</List.Item>)
+          }
           return (<List.Item key={index}
             thumb="https://zos.alipayobjects.com/rmsportal/eOZidTabPoEbPeU.png"
-            multipleLine
-          >Category</List.Item>)
-        }
-        return (<List.Item key={index}
-          thumb="https://zos.alipayobjects.com/rmsportal/eOZidTabPoEbPeU.png"
-        >Category{index}</List.Item>)
-      })}
-    </List>)
+          >Category{index}</List.Item>)
+        })}
+      </List>
+    )
 
     const drawerProps = {
-      docked: this.state.docked,
+      docked: this.props.docked,
       open: false,
       position: 'left',
     }
