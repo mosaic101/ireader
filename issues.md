@@ -19,8 +19,9 @@ resolve: {
 [Icon配置地址](https://mobile.ant.design/components/icon#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-(WEB-%E7%89%88))
 - 一. 首先安装依赖：
 ```bash
-npm install svg-sprite-loader -D
+npm install svg-sprite-loader@0.3.1 -D //antd-mobile暂时没有升级该模块，须指定版本
 ```
+
 - 二. webpack配置
 ```JavaScript
 const path = require('path');
@@ -43,5 +44,3 @@ module.exports = {
 };
 ```
 
-### 3.antd-mobile Icon个人svg配置
-目测是eslintrc.json

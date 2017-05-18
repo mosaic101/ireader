@@ -13,7 +13,7 @@ var path = require('path');
 //FIXME: private svg dir
 const svgDirs = [
   require.resolve('antd-mobile').replace(/warn\.js$/, ''),  // 1. 属于 antd-mobile 内置 svg 文件
-  path.resolve(__dirname, 'src/icons'),  // 2. 自己私人的 svg 存放目录
+  path.resolve(__dirname, 'src/icons/'),  // 2. private svg dir
 ];
 
 
@@ -80,7 +80,7 @@ module.exports = {
     // We also include JSX as a common component filename extension to support
     // some tools, although we do not recommend using it, see:
     // https://github.com/facebookincubator/create-react-app/issues/290
-    modulesDirectories: ['node_modules', path.join(__dirname, '../node_modules')],
+    // modulesDirectories: ['node_modules', path.join(__dirname, '../node_modules')],
     extensions: ['', '.web.tsx', '.web.ts', '.web.jsx', '.web.js', '.ts', '.tsx', '.js', '.jsx', '.json'],
     alias: {
       // Support React Native Web
@@ -173,9 +173,6 @@ module.exports = {
       {
         test: /\.(svg)$/i,
         loader: 'svg-sprite',
-        query: {
-          name: 'static/media/[name].[hash:8].[ext]'
-        },
         include: svgDirs,  // 把 svgDirs 路径下的所有 svg 文件交给 svg-sprite-loader 插件处理
       }
       // ** STOP ** Are you adding a new loader?

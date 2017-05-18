@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react'
-import { Grid, WhiteSpace, WingBlank } from 'antd-mobile'
+import { Grid, WhiteSpace, WingBlank, Toast } from 'antd-mobile'
+// import HKToast from './common/HKToast'
 import test from '../../test.png'
 import './Body.css'
 
@@ -26,7 +27,7 @@ class Body extends Component {
         <WhiteSpace size="lg" />
         <Grid data={data} columnNum={3} hasLine={false}
           renderItem={renderItem}
-          onClick={() => console.log('grid')}
+          onClick={() => Toast.loading('加载成功!!!', 1)}
         />
       </div>
     )
