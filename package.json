@@ -4,6 +4,9 @@
   "private": true,
   "author": "mosaic101",
   "description": "a app based on react",
+  "main": "index.js",
+  "repository": "https://github.com/mosaic101/react_app.git",
+  "license": "MIT",
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
