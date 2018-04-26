@@ -1,5 +1,5 @@
-# jj-reader
-基于react开发的一款移动端阅读器 
+# ireader
+基于react开发的一款移动端阅读器  doing~~~
 
 ## 技术栈
 
@@ -13,7 +13,7 @@
 
 ## 项目启动
 ```bash
-1. git clone https://github.com/mosaic101/jk-reader.git && cd jk-reader
+1. git clone https://github.com/mosaic101/ireader.git && cd ireader
 
 2. npm install && npm start
 ```
