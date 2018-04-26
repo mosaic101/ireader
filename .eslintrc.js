@@ -4,7 +4,7 @@ module.exports = {
     "es6": true,
     "mocha": true
   },
-  "extends": "standard",
+  "extends": "eslint-config-react-app",
   "parserOptions": {
     "ecmaVersion": 8,
     "sourceType": "module"
